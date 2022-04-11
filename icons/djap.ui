@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>651</width>
+    <height>532</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DJust Audio Player</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="audioPic">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>341</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="playBtn">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>410</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(icons/play.png) </string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nextBtn">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>410</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(icons/next.png) </string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="prevBtn">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>410</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(icons/prev.png) </string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loopBtn">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>410</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(icons/loop.png) </string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="volumeBtn">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>410</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(icons/volume.png) </string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QSlider" name="volumeSlider">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>370</y>
+      <width>341</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="timeline">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>480</y>
+      <width>531</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="pageStep">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="currentTimeLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0:00</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="endTimeLabel">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>480</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0:00</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <zorder>audioPic</zorder>
+   <zorder>playBtn</zorder>
+   <zorder>nextBtn</zorder>
+   <zorder>prevBtn</zorder>
+   <zorder>loopBtn</zorder>
+   <zorder>volumeBtn</zorder>
+   <zorder>timeline</zorder>
+   <zorder>currentTimeLabel</zorder>
+   <zorder>endTimeLabel</zorder>
+   <zorder>volumeSlider</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>651</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="aboutMenuBar">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <addaction name="helpOption"/>
+    <addaction name="separator"/>
+    <addaction name="aboutOption"/>
+   </widget>
+   <widget class="QMenu" name="playlistMenuBar">
+    <property name="title">
+     <string>Плейлисты</string>
+    </property>
+    <addaction name="saveOption"/>
+    <addaction name="saveAsOption"/>
+    <addaction name="deleteOption"/>
+    <addaction name="separator"/>
+    <addaction name="repeatModeOption"/>
+    <addaction name="oneModeOption"/>
+    <addaction name="randomModeOption"/>
+   </widget>
+   <widget class="QMenu" name="settings">
+    <property name="title">
+     <string>Настройки</string>
+    </property>
+    <widget class="QMenu" name="theme">
+     <property name="title">
+      <string>Тема</string>
+     </property>
+     <addaction name="lightThemeAction"/>
+     <addaction name="darkThemeAction"/>
+    </widget>
+    <addaction name="theme"/>
+   </widget>
+   <addaction name="playlistMenuBar"/>
+   <addaction name="aboutMenuBar"/>
+   <addaction name="settings"/>
+  </widget>
+  <action name="aboutOption">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="createOption">
+   <property name="text">
+    <string>Создать</string>
+   </property>
+  </action>
+  <action name="saveOption">
+   <property name="text">
+    <string>Сохранить плейлист</string>
+   </property>
+  </action>
+  <action name="saveAsOption">
+   <property name="text">
+    <string>Сохранить плейлист как...</string>
+   </property>
+  </action>
+  <action name="redactOption">
+   <property name="text">
+    <string>Редактировать</string>
+   </property>
+  </action>
+  <action name="deleteOption">
+   <property name="text">
+    <string>Удалить плейлист</string>
+   </property>
+  </action>
+  <action name="helpOption">
+   <property name="text">
+    <string>Посмотреть справку</string>
+   </property>
+  </action>
+  <action name="repeatModeOption">
+   <property name="text">
+    <string>Режим &quot;Повтор&quot;</string>
+   </property>
+  </action>
+  <action name="oneModeOption">
+   <property name="text">
+    <string>Режим &quot;Один раз&quot;</string>
+   </property>
+  </action>
+  <action name="randomModeOption">
+   <property name="text">
+    <string>Режим &quot;Случайный&quot;</string>
+   </property>
+  </action>
+  <action name="lightThemeAction">
+   <property name="text">
+    <string>Светлая</string>
+   </property>
+  </action>
+  <action name="darkThemeAction">
+   <property name="text">
+    <string>Тёмная</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
